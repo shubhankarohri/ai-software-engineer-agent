@@ -1,12 +1,12 @@
 __pycache__/
 *.pyc
 
-data/repos/
-data/cache/
-data/graphs/
-data/indexes/
+data/
+sample_data/
+.config/
 
 .ipynb_checkpoints/
+
 .env
 venv/
 .venv/
