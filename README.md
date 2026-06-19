@@ -12,7 +12,7 @@ An autonomous AI system that analyzes and understands software repositories.
 ## Progress
 
 - [x] Phase 1: Repository Ingestion & Tech Detection
-- [ ] Phase 2: AST Parsing
+- [x] Phase 2: AST Parsing
 - [ ] Phase 3: Dependency Graph
 - [ ] Phase 4: Semantic Search
 - [ ] Phase 5: Architecture Reasoning
