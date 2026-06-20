@@ -70,4 +70,5 @@ class RepoCloner:
             "head_commit_sha": head.hexsha[:7],
             "head_commit_message": head.message.strip(),
             "head_commit_author": str(head.author),
+
         }
