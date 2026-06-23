@@ -63,7 +63,6 @@ class DependencyGraphBuilder:
             fp = file_row["file_path"]
             node_id = file_row["module_name"] or fp
 
-            # Ignore pytest fixture modules
             if "test_apps" in node_id or "test_apps" in fp:
                 continue
 
