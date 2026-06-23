@@ -151,6 +151,3 @@ The agent is architected for straightforward productionization:
 | LLM | Gemini free tier | GPT-4 / Claude API |
 | Embedding model | all-MiniLM-L6-v2 | CodeBERT / codet5p |
 | Deployment | Google Colab | FastAPI on Railway / Render |
-```
-
-Copy paste the whole thing, commit directly on GitHub, and you're done. Then come back for Phase 7.
