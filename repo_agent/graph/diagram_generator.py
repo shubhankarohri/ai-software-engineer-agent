@@ -170,7 +170,7 @@ class DiagramGenerator:
             file_colors.get(H.nodes[n].get("file", ""), "#4a9eff")
             for n in H.nodes
         ]
-        
+
         nx.draw_networkx_nodes(
             H,
             pos,
