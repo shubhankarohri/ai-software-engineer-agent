@@ -15,24 +15,19 @@ class CodeSearchIndex:
         self.index = faiss.IndexFlatIP(dimension)
         self.chunks: list[CodeChunk] = []
 
-    def add(
-        self,
-        chunks: list[CodeChunk],
-        embeddings: np.ndarray,
-    ) -> None:
+    def add(self, chunks: list[CodeChunk], embeddings: np.ndarray) -> None:
         if len(chunks) != len(embeddings):
             raise ValueError(
-                f"Chunk count ({len(chunks)}) != "
-                f"embedding count ({len(embeddings)})"
+                f"Chunk count ({len(chunks)}) != embedding count ({len(embeddings)})"
             )
+
+        # Force numpy array with exact dtype and memory layout FAISS expects
+        embeddings = np.array(embeddings, dtype=np.float32)
+        embeddings = np.ascontiguousarray(embeddings)
 
         self.index.add(embeddings)
         self.chunks.extend(chunks)
-
-        print(
-            f"  ✓ Added {len(chunks)} chunks. "
-            f"Total: {self.index.ntotal}"
-        )
+        print(f"  ✓ Added {len(chunks)} chunks. Total: {self.index.ntotal}")
 
     def search(
         self,
