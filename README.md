@@ -1,6 +1,7 @@
+```markdown
 # AI Software Engineer Agent
 
-An autonomous AI system that analyzes, understands, and reasons about software repositories using static analysis, dependency graphs, semantic search, Retrieval-Augmented Generation (RAG), and auto-generated architecture diagrams.
+An autonomous AI system that analyzes, understands, and reasons about software repositories using static analysis, dependency graphs, semantic search, Retrieval-Augmented Generation (RAG), auto-generated architecture diagrams, and automated bug detection.
 
 ---
 
@@ -12,7 +13,7 @@ An autonomous AI system that analyzes, understands, and reasons about software r
 - ✅ Phase 4: Semantic Search
 - ✅ Phase 5: RAG-powered Repository Assistant
 - ✅ Phase 6: Architecture Diagram Generation
-- ⏳ Phase 7: Bug Detection & Code Smell Analysis
+- ✅ Phase 7: Bug Detection & Code Smell Analysis
 - ⏳ Phase 8: Refactoring & Implementation Planning
 
 ---
@@ -66,6 +67,18 @@ An autonomous AI system that analyzes, understands, and reasons about software r
 - Mermaid.js diagram generation for GitHub README embedding
 - All diagrams auto-generated directly from source code — never outdated
 
+### Bug Detection & Code Smell Analysis
+- Cyclomatic complexity detection with severity thresholds (McCabe > 10/20)
+- God class detection (classes exceeding method count thresholds)
+- Long method detection (functions exceeding 50/100 lines)
+- Deep nesting detection (indentation depth > 4/6 levels)
+- Too many arguments detection (functions with > 5/8 parameters)
+- Large file detection (files exceeding 300/500 lines)
+- Severity classification: Critical / High / Medium / Low
+- Structured JSON audit report with per-file findings
+- Actionable refactoring suggestions per detected smell
+- Strategy Pattern architecture — detectors are independently extensible
+
 ---
 
 ## Tech Stack
@@ -84,6 +97,8 @@ An autonomous AI system that analyzes, understands, and reasons about software r
 | Graphviz | Architecture diagram rendering |
 | Matplotlib | Static graph and hierarchy diagrams |
 | NumPy | Embedding matrix operations |
+| Radon | Maintainability index & complexity metrics |
+| Pylint | Rule-based static analysis |
 
 ---
 
@@ -109,21 +124,14 @@ GitHub URL
     ↓
 [Phase 6] Diagram Generator
     Graphviz → Matplotlib → Mermaid.js → Architecture visuals
+    ↓
+[Phase 7] Audit Engine
+    6 smell detectors → Severity ranking → JSON report
 ```
 
 ---
 
 ## Roadmap
-
-### Phase 7 — Bug Detection & Code Smell Analysis
-- Cyclomatic complexity thresholds and warnings
-- God class and God module detection
-- Dead code detection (unreferenced functions)
-- Long method and large class detection
-- N+1 query pattern detection
-- AST heuristics for common anti-patterns
-- Pylint integration for additional rule-based checks
-- Structured smell report with severity rankings
 
 ### Phase 8 — Refactoring & Implementation Planning
 - AI-generated refactoring suggestions per detected smell
@@ -151,3 +159,4 @@ The agent is architected for straightforward productionization:
 | LLM | Gemini free tier | GPT-4 / Claude API |
 | Embedding model | all-MiniLM-L6-v2 | CodeBERT / codet5p |
 | Deployment | Google Colab | FastAPI on Railway / Render |
+```
