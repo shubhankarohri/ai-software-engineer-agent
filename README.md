@@ -33,20 +33,6 @@ Point it at any public GitHub repository. It will:
 - ✅ Phase 7: Bug Detection & Code Smell Analysis
 - ✅ Phase 8: Refactoring & Implementation Planning
 
----
-
-## Quick Start
-
-1. Open the notebook in Google Colab
-2. Run the bootstrap cell
-3. Set your GitHub URL in the reset cell
-4. Run phases 1 through 8 in order
-5. No local setup. No credit card. Works on any public repo.
-
-Add your Gemini API key via Colab Secrets (key name: `GEMINI_API_KEY`).
-
----
-
 ## Capabilities
 
 ### Repository Analysis
